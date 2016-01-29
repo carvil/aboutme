@@ -19,3 +19,6 @@ configure :build do
     opts.exts = %w(.html .htm .js .css .jpg)
   end
 end
+
+activate :relative_assets
+set :relative_links, true
