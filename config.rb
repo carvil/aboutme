@@ -1,44 +1,24 @@
-###
-# Page options, layouts, aliases and proxies
-###
+activate :syntax
 
-# Per-page layout changes:
-#
-# With no layout
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# With alternative layout
-# page "/path/to/file.html", layout: :otherlayout
 
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
-
-# General configuration
-
-# Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
 end
 
-###
-# Helpers
-###
+caching_policy 'text/html', max_age: 0, must_revalidate: true
+default_caching_policy max_age:(60 * 60 * 24 * 365)
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
-
-# Build-specific configuration
 configure :build do
-  # Minify CSS on build
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_css
+  activate :minify_javascript
+  activate :asset_hash do |opts|
+    opts.exts += %w(.ico)
+  end
+  activate :gzip do |opts|
+    opts.exts = %w(.html .htm .js .css .jpg)
+  end
 end

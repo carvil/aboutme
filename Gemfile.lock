@@ -95,8 +95,6 @@ GEM
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
-    middleman-sitemap (0.0.13)
-      middleman-core (>= 3.2.2)
     middleman-syntax (2.1.0)
       middleman-core (>= 3.2)
       rouge (~> 1.0)
@@ -143,7 +141,6 @@ DEPENDENCIES
   middleman-compass
   middleman-livereload
   middleman-minify-html
-  middleman-sitemap
   middleman-syntax
 
 BUNDLED WITH
