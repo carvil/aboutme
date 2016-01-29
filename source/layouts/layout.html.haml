@@ -1,0 +1,14 @@
+!!!
+%html{lang: 'en'}
+  %head
+    %meta{name: 'viewport', content: 'initial-scale=1.0'}
+    %meta{charset: 'utf-8'}
+    %title= current_page.data.title || 'Carlos Vilhena'
+    - if current_page.data.description
+      %meta{name: 'description', content: current_page.data.description}
+    = stylesheet_link_tag 'site'
+    = javascript_include_tag 'all'
+    = favicon_tag 'images/favicon.ico'
+
+  %body{class: page_classes}
+    = yield
