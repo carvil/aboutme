@@ -9,9 +9,6 @@ configure :development do
   activate :livereload
 end
 
-caching_policy 'text/html', max_age: 0, must_revalidate: true
-default_caching_policy max_age:(60 * 60 * 24 * 365)
-
 configure :build do
   activate :minify_css
   activate :minify_javascript
