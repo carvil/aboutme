@@ -22,3 +22,8 @@ end
 
 activate :relative_assets
 set :relative_links, true
+
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-29308499-1'
+  ga.domain_name = 'carlosvilhena@gmail.com'
+end
