@@ -2,7 +2,7 @@
 # the following line to use 'http://'
 source 'https://rubygems.org'
 
-gem 'middleman', '3.3.7'
+gem 'middleman'
 gem 'middleman-livereload'
 gem 'middleman-minify-html'
 gem 'middleman-syntax'
