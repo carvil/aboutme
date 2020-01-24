@@ -13,7 +13,7 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash do |opts|
-    opts.exts += %w(.ico)
+    opts.exts = (opts.exts || []) + %w(.ico)
   end
   activate :gzip do |opts|
     opts.exts = %w(.html .htm .js .css .jpg)
