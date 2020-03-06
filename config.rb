@@ -27,11 +27,3 @@ activate :google_analytics do |ga|
   ga.tracking_id = 'UA-29308499-1'
   ga.domain_name = 'carlosvilhena@gmail.com'
 end
-
-activate :deploy do |deploy|
-  deploy.method = :git
-  deploy.remote   = 'origin'
-  deploy.branch   = 'gh-pages'
-  deploy.strategy = :force_pus
-  deploy.commit_message = 'Site deployed'
-end
